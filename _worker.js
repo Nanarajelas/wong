@@ -3,8 +3,8 @@ import { connect } from "cloudflare:sockets";
 // import { Buffer } from "node:buffer";
 
 // Variables
-const rootDomain = "foolvpn.me"; // Ganti dengan domain utama kalian
-const serviceName = "nautica"; // Ganti dengan nama workers kalian
+const rootDomain = "kere.my.id"; // Ganti dengan domain utama kalian
+const serviceName = "wong"; // Ganti dengan nama workers kalian
 const apiKey = ""; // Ganti dengan Global API key kalian (https://dash.cloudflare.com/profile/api-tokens)
 const apiEmail = ""; // Ganti dengan email yang kalian gunakan
 const accountID = ""; // Ganti dengan Account ID kalian (https://dash.cloudflare.com -> Klik domain yang kalian gunakan)
@@ -23,7 +23,7 @@ const DNS_SERVER_ADDRESS = "8.8.8.8";
 const DNS_SERVER_PORT = 53;
 const PROXY_HEALTH_CHECK_API = "https://id1.foolvpn.me/api/v1/check";
 const CONVERTER_URL = "https://api.foolvpn.me/convert";
-const DONATE_LINK = "https://trakteer.id/dickymuliafiqri/tip";
+const DONATE_LINK = "https:// google.com";
 const BAD_WORDS_LIST =
   "https://gist.githubusercontent.com/adierebel/a69396d79b787b84d89b45002cb37cd6/raw/6df5f8728b18699496ad588b3953931078ab9cf1/kata-kasar.txt";
 const PROXY_PER_PAGE = 24;
@@ -118,7 +118,7 @@ function getAllConfig(request, hostName, proxyList, page = 0) {
 
     // Build HTML
     const document = new Document(request);
-    document.setTitle("Welcome to <span class='text-blue-500 font-semibold'>Nautica</span>");
+    document.setTitle("Wong <span class='text-blue-500 font-semibold'>Kere</span>");
     document.addInfo(`Total: ${proxyList.length}`);
     document.addInfo(`Page: ${page}/${Math.floor(proxyList.length / PROXY_PER_PAGE)}`);
 
@@ -1610,7 +1610,7 @@ class Document {
       proxyGroupElement += `      <div id="container-region-check-${i}">`;
       proxyGroupElement += `        <input id="config-sample-${i}" class="hidden" type="text" value="${proxyData.list[0]}">`;
       proxyGroupElement += `      </div>`;
-      proxyG_proxy_info += `    </div>`;
+      proxyGroupElement += `    </div>`;
       proxyGroupElement += `  </div>`;
       proxyGroupElement += `  <div class="flex flex-col gap-2 mt-4 text-sm">`;
       for (let x = 0; x < proxyData.list.length; x++) {
